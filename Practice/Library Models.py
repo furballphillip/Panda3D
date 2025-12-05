@@ -1,9 +1,11 @@
-from panda3d.core import loadPrcFile
-loadPrcFile("Configs\config.prc")
+from panda3d.core import loadPrcFile, Loader
+loadPrcFile("Configs/config.prc")
 
 from direct.showbase.ShowBase import ShowBase
 
 class GameWindow(ShowBase):
+    loader: Loader
+    
     def __init__(self):
         super().__init__()
 
