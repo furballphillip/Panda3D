@@ -9,6 +9,9 @@ class GameWindow(ShowBase):
     def __init__(self):
         super().__init__()
 
+        env = self.loader.loadModel("models/environment")
+        env.reparentTo(self.render)
+
         box = self.loader.loadModel("models/box")
         box.setPos(0, 10, 0)
         box.reparentTo(self.render)
