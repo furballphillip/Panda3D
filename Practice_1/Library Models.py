@@ -1,8 +1,7 @@
-from panda3d.core import loadPrcFile, Loader
+from panda3d.core import loadPrcFile, Loader, NodePath
 loadPrcFile("Configs/config.prc")
 
 from direct.showbase.ShowBase import ShowBase
-from panda3d.core import NodePath
 
 class GameWindow(ShowBase):
     loader: Loader # Explicit type definition for loader

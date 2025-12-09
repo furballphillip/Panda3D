@@ -8,9 +8,9 @@ This project will used to keep track of the progress in my practice with Panda3D
 
 
 
-### Practice #1
+### Practice_1
 
-I've used the "Practice #1" folder for files that were worked on while working along side a Panda3D tutorial on Youtube.
+I've used the "Practice_1" folder for files that were worked on while working along side a Panda3D tutorial on Youtube.
 
 
 
