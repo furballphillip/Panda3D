@@ -31,11 +31,11 @@ class GameWindow(ShowBase):
         dLightNP.setHpr(45, -45, 0)
         self.render.setLight(dLightNP)
 
-        # Show available animations tracks
+        # Show available animation tracks
         anim_names = self.actor.getAnimNames()
         print("Animations:", anim_names)
 
-        # play the first animation
+        # Play the first animation
         if anim_names:
             self.actor.loop("(Sitting) Walk")
 
