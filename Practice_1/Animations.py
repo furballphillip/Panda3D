@@ -41,6 +41,17 @@ class GameWindow(ShowBase):
 
         environment_model = self.loader.loadModel("models/environment")
         environment_model.reparentTo(self.render)
+        
+        self.x = 0
+        self.z = 3
+        self.taskMgr.add(self.updateTask, "update")
 
+    def updateTask(self, task):
+        self.character_actor.setPos(self.x, 50, self.z)
+        self.x += 0.01
+        self.z += 0.005
+    
+        return task.cont
+    
 game = GameWindow()
 game.run()
