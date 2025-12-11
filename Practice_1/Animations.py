@@ -4,7 +4,7 @@ loadPrcFile("Configs/config.prc")
 from direct.showbase.ShowBase import ShowBase
 from direct.actor.Actor import Actor
 
-filepath = "Character.glb" 
+character_model_path = "Character.glb" 
 
 class GameWindow(ShowBase):
     loader: Loader # Explicit type definition for loader
@@ -13,34 +13,34 @@ class GameWindow(ShowBase):
         super().__init__()
 
         # Load the model directly
-        character = self.loader.loadModel(filepath)
-        self.actor = Actor(character)
-        self.actor.reparentTo(self.render)
-        self.actor.setPos(0, 50, 3)
-        self.actor.setScale(2, 2, 2)
+        character_model = self.loader.loadModel(character_model_path)
+        self.character_actor = Actor(character_model)
+        self.character_actor.reparentTo(self.render)
+        self.character_actor.setPos(0, 50, 3)
+        self.character_actor.setScale(2, 2, 2)
 
         # Add lighting
-        aLight = AmbientLight("ambient")
-        aLight.setColor((0.5, 0.5, 0.5, 1))
-        aLightNP = self.render.attachNewNode(aLight)
-        self.render.setLight(aLightNP)
+        ambient_light = AmbientLight("ambient")
+        ambient_light.setColor((0.5, 0.5, 0.5, 1))
+        ambient_light_np = self.render.attachNewNode(ambient_light)
+        self.render.setLight(ambient_light_np)
 
-        dLight = DirectionalLight("directional")
-        dLight.setColor((1, 1, 1, 1))
-        dLightNP = self.render.attachNewNode(dLight)
-        dLightNP.setHpr(45, -45, 0)
-        self.render.setLight(dLightNP)
+        directional_light = DirectionalLight("directional")
+        directional_light.setColor((1, 1, 1, 1))
+        directional_light_np = self.render.attachNewNode(directional_light)
+        directional_light_np.setHpr(45, -45, 0)
+        self.render.setLight(directional_light_np)
 
         # Show available animation tracks
-        anim_names = self.actor.getAnimNames()
-        print("Animations:", anim_names)
+        animation_names = self.character_actor.getAnimNames()
+        print("Animations:", animation_names)
 
         # Play the first animation
-        if anim_names:
-            self.actor.loop("(Sitting) Walk")
+        if animation_names:
+            self.character_actor.loop("(Sitting) Walk")
 
-        env = self.loader.loadModel("models/environment")
-        env.reparentTo(self.render)
+        environment_model = self.loader.loadModel("models/environment")
+        environment_model.reparentTo(self.render)
 
 game = GameWindow()
 game.run()
