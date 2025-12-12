@@ -7,10 +7,10 @@ from direct.actor.Actor import Actor
 character_model_path = "Character.glb" 
 
 class GameWindow(ShowBase):
-    loader: Loader # Explicit type definition for loader
-    
     def __init__(self):
         super().__init__()
+
+        self.loader: Loader # Explicit type definition for loader
 
         # Load the model directly
         character_model = self.loader.loadModel(character_model_path)
@@ -44,12 +44,16 @@ class GameWindow(ShowBase):
         
         self.x = 0
         self.z = 3
+        self.speed = 0.5
         self.taskMgr.add(self.updateTask, "update")
 
     def updateTask(self, task):
+        dt = globalClock.getDt() # type: ignore
+        print(f"Delta Time: {dt}")
+
         self.character_actor.setPos(self.x, 50, self.z)
-        self.x += 0.01
-        self.z += 0.005
+        self.x += self.speed * dt
+        self.z += self.speed * dt
     
         return task.cont
     
