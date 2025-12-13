@@ -25,7 +25,7 @@ class GameWindow(ShowBase):
         self.jack.setHpr(0, 180, 180)
         self.jack.reparentTo(self.render)
 
-        # Movement keys
+        # Key Binds
         self.accept("a", updateKeyMap, ["left", True])
         self.accept("a-up", updateKeyMap, ["left", False])
         self.accept("d", updateKeyMap, ["right", True])
