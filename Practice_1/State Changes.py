@@ -4,8 +4,6 @@ loadPrcFile("Configs/config.prc")
 from direct.showbase.ShowBase import ShowBase
 from math import sin, cos
 
-character_model_path = "Character.glb" 
-
 class GameWindow(ShowBase):
     def __init__(self):
         super().__init__()

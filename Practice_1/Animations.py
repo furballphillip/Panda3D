@@ -10,8 +10,6 @@ class GameWindow(ShowBase):
     def __init__(self):
         super().__init__()
 
-        self.loader: Loader # Explicit type definition for loader
-
         # Load the model directly
         character_model = self.loader.loadModel(character_model_path)
         self.character_actor = Actor(character_model)
@@ -40,7 +38,7 @@ class GameWindow(ShowBase):
             self.character_actor.loop("(Sitting) Walk")
 
         environment_model = self.loader.loadModel("models/environment")
-        environment_model.reparentTo(self.render)
+        environment_model.reparentTo(self.render) # type: ignore
         
         self.x = 0
         self.z = 3

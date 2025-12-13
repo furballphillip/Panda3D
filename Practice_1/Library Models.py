@@ -3,15 +3,15 @@ loadPrcFile("Configs/config.prc")
 
 from direct.showbase.ShowBase import ShowBase
 
-class GameWindow(ShowBase):
-    loader: Loader # Explicit type definition for loader
-    
+class GameWindow(ShowBase): 
     def __init__(self):
         super().__init__()
 
+        self.loader: Loader # Explicit type definition for loader
+
         empty = NodePath("empty")
 
-        env = self.loader.loadModel("models/environment")
+        env = self.loader.loadModel("models/environment") 
         env.reparentTo(self.render)
 
         box = self.loader.loadModel("models/box")
