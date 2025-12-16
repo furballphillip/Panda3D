@@ -17,7 +17,7 @@ def updateKeyMap(key, state):
 class GameWindow(ShowBase):
     def __init__(self):
         super().__init__()
-        self.loader: Loader
+        self.loader: Loader # Explicit type definition for loader
 
         self.cam.setPos(0, -10, 0)
 
