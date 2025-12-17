@@ -26,14 +26,11 @@ class GameWindow(ShowBase):
         self.lightX = 0
         self.lightSpeed = 2
 
-        plight = PointLight("plight")
-        plight.setColor((1,1,1,1))
+        pLight = PointLight("pLight")
         
-        self.plightNodePath = self.render.attach_new_node(plight)
-        plight.setAttenuation((1, 0, 0))
-        self.render.setLight(self.plightNodePath)
-
-
+        self.pLightNodePath = self.render.attach_new_node(pLight)
+        pLight.setAttenuation((1, 0, 0))
+        self.render.setLight(self.pLightNodePath)
 
         self.taskMgr.add(self.move_light, "move-light")
 
@@ -44,8 +41,8 @@ class GameWindow(ShowBase):
     def move_light(self, task):
         dt = globalClock.getDt()
 
-        self.plightNodePath.setPos(cos(self.lightX)*4, sin(self.lightX)*4, 0)
-        self.light_model.setPos(self.plightNodePath.getPos())
+        self.pLightNodePath.setPos(cos(self.lightX)*4, sin(self.lightX)*4, 0)
+        self.light_model.setPos(self.pLightNodePath.getPos())
         self.lightX += self.lightSpeed * dt
 
         return task.cont
