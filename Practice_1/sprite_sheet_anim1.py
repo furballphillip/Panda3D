@@ -16,9 +16,16 @@ class GameWindow(ShowBase):
 
         cm = CardMaker("sprite")
         cm.setFrame(-1, 1, -1, 1)  # Creates a plane from (-1, -1) to (1, 1)
-
+        
         plane = render.attachNewNode(cm.generate())
-        plane.setTexture(loader.loadTexture("models/knight.png"))
+
+        texture = loader.loadTexture("models/knight.png")
+        
+        # Texture Filtering
+        texture.setMinfilter(texture.FTNearest)
+        texture.setMagfilter(texture.FTNearest)
+
+        plane.setTexture(texture)
         plane.setTransparency(TransparencyAttrib.MAlpha)
 
         self.taskMgr.add(self.updateManagers, "Update texture")
@@ -26,8 +33,7 @@ class GameWindow(ShowBase):
     def update_texture(self, task):
 
         return task.cont
-
-
+        
         
 game = GameWindow()
 game.run()
