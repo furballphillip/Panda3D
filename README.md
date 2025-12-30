@@ -1,6 +1,6 @@
 ## Panda3D Practice
 
-This project will used to keep track of the progress in my practice with Panda3D.
+This project will be used to keep track of the progress in my practice with Panda3D.
 
 
 
