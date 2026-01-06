@@ -4,13 +4,11 @@ loadPrcFile("Configs\config.prc")
 from direct.showbase.ShowBase import ShowBase
 from panda3d.core import PointLight, AmbientLight, NodePath
 from math import sin, cos
-from direct.filter.CommonFilters import CommonFilters
 
 class LightsAndShadows(ShowBase):
     def __init__(self):
         super().__init__()
-
-        self.loader : Loader
+        self.loader : Loader # Explicit type definition for loader
 
         self.set_background_color(0, 0, 0, 1)
         self.cam.setPos(0, -12, 0)
@@ -56,9 +54,6 @@ class LightsAndShadows(ShowBase):
 
         self.floor.setLight(pLightNodePath)
         self.floor.setLight(aLightNodePath)
-
-        filters = CommonFilters(self.win, self.cam)
-        filters.setBloom(size="large")
 
         self.taskMgr.add(self.move_light, "move-light")
 
