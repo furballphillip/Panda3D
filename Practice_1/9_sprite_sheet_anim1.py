@@ -21,7 +21,7 @@ class GameWindow(ShowBase):
         
         self.plane = render.attachNewNode(cm.generate())
 
-        texture = loader.loadTexture("models/knight.png")
+        texture = loader.loadTexture("assets/sprite_sheets/knight.png")
         
         # Texture Filtering
         texture.setMinfilter(texture.FTNearest)

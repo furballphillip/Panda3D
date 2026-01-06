@@ -16,17 +16,17 @@ class LightsAndShadows(ShowBase):
 
         self.bombul = NodePath("bombul")
     
-        self.bombul1 = self.loader.loadModel('models/Fantastic Turing-Bombul.glb')
+        self.bombul1 = self.loader.loadModel('assets/models/bombul.glb')
         self.bombul1.setPos(0, 0, -3)
         self.bombul.setScale(0.5, 0.5, 0.5)
         self.bombul1.reparentTo(self.bombul)
 
-        self.bombul2 = self.loader.loadModel('models/Fantastic Turing-Bombul.glb')
+        self.bombul2 = self.loader.loadModel('assets/models/bombul.glb')
         self.bombul2.setPos(4, 7, -3)
         self.bombul.setScale(0.5, 0.5, 0.5)
         self.bombul2.reparentTo(self.bombul)
 
-        self.bombul3 = self.loader.loadModel('models/Fantastic Turing-Bombul.glb')
+        self.bombul3 = self.loader.loadModel('assets/models/bombul.glb')
         self.bombul3.setPos(-4, 7, -3)
         self.bombul.setScale(0.5, 0.5, 0.5)
         self.bombul3.reparentTo(self.bombul)

@@ -11,7 +11,7 @@ class GameWindow(ShowBase):
         self.loader : Loader # Explicit type definition for loader
 
         self.set_background_color(0, 0, 0, 1)
-        self.bombul = self.loader.loadModel('models/Fantastic Turing-Bombul.glb')
+        self.bombul = self.loader.loadModel('assets/models/bombul.glb')
         self.bombul.setPos(0, 0, -1)
         self.bombul.setScale(0.5, 0.5, 0.5)
         self.bombul.reparentTo(self.render)
