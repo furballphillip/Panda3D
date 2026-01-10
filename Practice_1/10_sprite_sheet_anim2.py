@@ -17,11 +17,7 @@ class GameWindow(ShowBase):
 
         self.knight = self.loader.loadModel("assets/texture_cards/Knight")
         self.knight.reparentTo(self.render)
-        
-
- 
-
-        
+    
         
 game = GameWindow()
 game.run()
