@@ -15,7 +15,7 @@ class GameWindow(ShowBase):
         self.set_background_color(0.1, 0.1, 0.1, 1)
         self.cam.setPos(0, -5, 0)
 
-        self.knight = self.loader.loadModel("assets/texture_cards/Knight")
+        self.knight = self.loader.loadModel("assets/texture_cards/Knight.egg")
         self.knight.reparentTo(self.render)
     
         
