@@ -17,7 +17,7 @@ key_map = {
 def update_key_map(control_name, control_state, entity, walking):
     key_map[control_name] = control_state
     if key_map["left"] or key_map["right"]: # Check if movement key is pressed
-        entity.find('**/+SequenceNode').node().loop(True, 0, 1)  # Walk: toggle between frames 0 and 1
+        entity.find('**/+SequenceNode').node().loop(True, 0, 1)  # Walk: swap between frames 0 and 1
     else:
         entity.find('**/+SequenceNode').node().loop(True, 0, 0)  # Idle: stay on frame 0
 
@@ -44,7 +44,6 @@ class GameWindow(ShowBase):
         print(f"Knight position: {self.knight.getPos()}")
         print(f"Knight scale: {self.knight.getScale()}")
         
-        #self.knight.find('**/+SequenceNode').node().loop(True, 10, 19)
         self.knight.find('**/+SequenceNode').node().loop(True, 0, 0)  # Start with idle on frame 0
 
         lens = OrthographicLens()
