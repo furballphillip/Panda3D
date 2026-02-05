@@ -48,4 +48,3 @@ class GameWindow(ShowBase):
 
 game = GameWindow()
 game.run()
-
