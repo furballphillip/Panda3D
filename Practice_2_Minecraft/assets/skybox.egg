@@ -13,42 +13,42 @@
 }
 
 <Texture> t_north.png {
-  "t_north.png"
+  "png/t_north.png"
   <Scalar> wrap    { CLAMP }
   <Scalar> magfilter { BILINEAR }
   <Scalar> uv-name { UVTex }
   <Scalar> envtype { modulate }
 }
 <Texture> t_south.png {
-  "t_south.png"
+  "png/t_south.png"
   <Scalar> wrap    { CLAMP }
   <Scalar> magfilter { BILINEAR }
   <Scalar> uv-name { UVTex }
   <Scalar> envtype { modulate }
 }
 <Texture> t_up.png {
-  "t_up.png"
+  "png/t_up.png"
   <Scalar> wrap    { CLAMP }
   <Scalar> magfilter { BILINEAR }
   <Scalar> uv-name { UVTex }
   <Scalar> envtype { modulate }
 }
 <Texture> t_east.png {
-  "t_east.png"
+  "png/t_east.png"
   <Scalar> wrap    { CLAMP }
   <Scalar> magfilter { BILINEAR }
   <Scalar> uv-name { UVTex }
   <Scalar> envtype { modulate }
 }
 <Texture> t_west.png {
-  "t_west.png"
+  "png/t_west.png"
   <Scalar> wrap    { CLAMP }
   <Scalar> magfilter { BILINEAR }
   <Scalar> uv-name { UVTex }
   <Scalar> envtype { modulate }
 }
 <Texture> t_down.png {
-  "t_down.png"
+  "png/t_down.png"
   <Scalar> wrap    { CLAMP }
   <Scalar> magfilter { BILINEAR }
   <Scalar> uv-name { UVTex }
