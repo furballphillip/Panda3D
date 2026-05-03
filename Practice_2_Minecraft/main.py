@@ -1,8 +1,10 @@
 from direct.showbase.ShowBase import ShowBase
 from panda3d.core import DirectionalLight, AmbientLight
 from panda3d.core import TransparencyAttrib
-from panda3d.core import WindowProperties
+from panda3d.core import WindowProperties, load_prc_file
 from direct.gui.OnscreenImage import OnscreenImage
+
+load_prc_file('configs/config.prc')
 
 class Game(ShowBase):
     def __init__(self):
